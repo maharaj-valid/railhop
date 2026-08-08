@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RailHop — Find Vacant Train Seats After Chart Preparation</title>
+  <meta name="description" content="Find vacant IRCTC train berths after chart preparation. Smart seat-hopping finds combinations so you always reach your destination. Free, no login.">
+  <meta name="keywords" content="IRCTC chart vacancy, vacant berth, seat hopping, train seat, waitlist, chart preparation">
+  <meta property="og:title" content="RailHop — Find Vacant Train Seats">
+  <meta property="og:description" content="Find vacant berths after IRCTC chart preparation. Free. No login. No app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="/">
+      <div class="logo-icon">🚆</div>
+      <span class="logo-text">RailHop</span>
+    </a>
+    <div class="nav-links">
+      <button class="nav-btn on">Chart Vacancy</button>
+      <button class="nav-btn" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it Works</button>
+      <button class="nav-btn" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Features</button>
+      <button class="nav-btn" onclick="document.getElementById('reviews').scrollIntoView({behavior:'smooth'})">Reviews</button>
+    </div>
+  </div>
+</nav>
+
+<!-- App root — JS renders search/results here -->
+<div id="root"></div>
+
+<!-- Landing sections — hidden on results page by JS -->
+<div id="landing">
+
+  <!-- How it Works -->
+  <section class="section" id="how">
+    <div class="section-in">
+      <div class="section-tag">How it Works</div>
+      <h2 class="section-h2">Find seats in 3 simple steps</h2>
+      <p class="section-sub">No signup. No login. Just enter train details and find vacant berths instantly.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">🚂</div>
+          <div class="step-title">Enter train details</div>
+          <p class="step-desc">Type your train number — we auto-fetch the full route. Pick your journey date and boarding / destination stations.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">📡</div>
+          <div class="step-title">We check IRCTC live</div>
+          <p class="step-desc">RailHop fetches the reservation chart from IRCTC in real-time — the same publicly available chart every passenger can see.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">🎯</div>
+          <div class="step-title">Book on IRCTC</div>
+          <p class="step-desc">We show direct vacant seats and smart seat-hopping paths. Click Book to go straight to IRCTC and confirm your booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad -->
+  <div style="padding:0 20px 40px">
+    <div class="ad-strip">📢 Advertisement — Google AdSense</div>
+  </div>
+
+  <!-- Features -->
+  <section class="feats-bg" id="features">
+    <div class="feats-in">
+      <div class="section-tag" style="color:#F97316">Why RailHop</div>
+      <h2 class="feat-h2">Everything GapSeat charges for — completely free</h2>
+      <p class="feat-sub">Unlimited searches. No app. No login. Ever.</p>
+      <div class="feats">
+        <div class="feat">
+          <div class="feat-icon">🔓</div>
+          <div class="feat-title">100% Free Always</div>
+          <p class="feat-desc">No limits, no premium plan, no paywall. Unlimited chart vacancy checks for every passenger.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🚫</div>
+          <div class="feat-title">No Login Required</div>
+          <p class="feat-desc">No account, no email, no phone number needed — ever.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🔀</div>
+          <div class="feat-title">Smart Seat Hopping</div>
+          <p class="feat-desc">No direct berth? We find 2, 3, 4, 5+ segment combinations that together complete your journey.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">🚆</div>
+          <div class="feat-title">All Trains</div>
+          <p class="feat-desc">Any Indian Railways train after chart preparation — Sleeper, AC 3-Tier, AC 2-Tier, First AC.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">⚡</div>
+          <div class="feat-title">Real-Time Data</div>
+          <p class="feat-desc">Fetched live from IRCTC every search. Always reflects latest cancellations.</p>
+        </div>
+        <div class="feat">
+          <div class="feat-icon">📱</div>
+          <div class="feat-title">Mobile Friendly</div>
+          <p class="feat-desc">Designed for the station platform. Works on any phone browser — no app needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad -->
+  <div style="padding:40px 20px 0">
+    <div class="ad-strip">📢 Advertisement — Google AdSense</div>
+  </div>
+
+  <!-- Reviews -->
+  <section class="reviews-sec" id="reviews">
+    <div class="reviews-in">
+      <div class="section-tag">User Reviews</div>
+      <h2 class="section-h2">Share Your Experience</h2>
+      <p class="section-sub">Tell us how RailHop helped you — or suggest an improvement.</p>
+      <div class="rv-layout">
+        <div class="rv-form-wrap">
+          <h3>✍️ Write a Review</h3>
+          <form class="rv-form" id="reviewForm">
+            <input class="rv-input" id="rvName" placeholder="Your name (optional)" maxlength="40" autocomplete="off">
+            <div class="rv-stars-row">
+              <span class="rv-stars-label">Rating:</span>
+              <button type="button" class="star-btn active" data-v="1">★</button>
+              <button type="button" class="star-btn active" data-v="2">★</button>
+              <button type="button" class="star-btn active" data-v="3">★</button>
+              <button type="button" class="star-btn active" data-v="4">★</button>
+              <button type="button" class="star-btn active" data-v="5">★</button>
+            </div>
+            <textarea class="rv-textarea" id="rvText"
+              placeholder="Share your experience or suggestion… (required)"
+              maxlength="400" required></textarea>
+            <button type="submit" class="rv-submit">Submit Review</button>
+          </form>
+        </div>
+        <div class="rv-list-wrap">
+          <h3>💬 Recent Reviews</h3>
+          <div id="reviews-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end #landing -->
+
+<!-- Footer -->
+<footer>
+  <div class="f-logo">🚆 RailHop</div>
+  <p>
+    Data sourced from IRCTC's publicly available reservation chart system.<br>
+    RailHop does not book tickets — we only show seat availability.<br>
+    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="#">Terms of Use</a> &nbsp;·&nbsp;
+    <a href="#">Contact</a>
+  </p>
+</footer>
+
+<!-- Load algorithm first, then app -->
+<script src="algorithm.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
